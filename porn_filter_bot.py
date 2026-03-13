@@ -25,9 +25,10 @@ from telegram.ext import (
 from groq import Groq
 
 # ── CONFIGURATION ──────────────────────────────────────
-TELEGRAM_BOT_TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"  # BotFather se lo
-GROQ_API_KEY       = "YOUR_GROQ_API_KEY"         # console.groq.com se lo
 
+
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 # Warn limit — kitni warnings ke baad ban
 WARN_LIMIT = 2
 
